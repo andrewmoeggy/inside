@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #8e43e7;
+  --text-color: #212529;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --breakpoint-xl: 1200px;
+  --breakpoint-lg: 992px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 576px;
+  --primary-font: 'Roboto', sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-weight: 400;
+}
