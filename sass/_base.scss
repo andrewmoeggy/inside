@@ -1,8 +1,11 @@
 :root {
   --primary-color: #8e43e7;
   --text-color: #212529;
+  --text-color-gray: #4c4c4c;
+  --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
+  --gray-light: #f8f9fa;
   --breakpoint-xl: 1200px;
   --breakpoint-lg: 992px;
   --breakpoint-md: 768px;
@@ -22,6 +25,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; //10px
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,14 +37,32 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 100vh 15vh repeat(4, min-content);
+  grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 
-  @media only screen and (max-width: $bp-large) {
-      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-      grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  }
-  @media only screen and (max-width: $bp-medium) {
-      grid-template-rows: 6rem calc(100vh - 6rem);
-  }
+ /* // @media only screen and (max-width: $bp-large) {
+  //     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+  //     grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  // }
+  // @media only screen and (max-width: $bp-medium) {
+  //     grid-template-rows: 6rem calc(100vh - 6rem);
+  // } */
+}
+
+
+// UTILITIES
+
+.primary-color-text {
+  color: var(--primary-color);
+}
+
+.cta-btn {
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding: 1.2rem 2.5rem;
+  font-size: 1.4rem;
+  border: 2px solid var(--primary-color);
+  text-transform: uppercase;
+  border-radius: 2px;
+  letter-spacing: 1px;
 }
