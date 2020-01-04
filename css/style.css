@@ -61,6 +61,9 @@ body {
 .cta-btn:hover {
   transform: scale(1.05); }
 
+.learn-more-icon {
+  font-size: 1.4rem; }
+
 @media only screen and (max-width: 576px) {
   html {
     font-size: 52.5%; } }
@@ -214,8 +217,10 @@ ion-icon[name='flame'] {
   color: #c98900; }
 
 @media only screen and (max-width: 500px) {
-  .brands__heading {
-    margin-bottom: 1rem; } }
+  .brand__heading {
+    margin-bottom: 1rem; }
+  .brand__list {
+    padding: 7rem 1rem 7rem 1rem; } }
 
 .blog {
   grid-column: 1 / -1;
@@ -247,9 +252,59 @@ ion-icon[name='flame'] {
     transform: translate(-50%, 0);
     bottom: 1.5rem; }
   .blog__paragraph {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
     font-size: 1.8rem;
     padding: 0 2rem 0 2rem;
-    color: var(--gray-dark-alpha); }
+    color: var(--gray-dark-alpha);
+    margin-bottom: 6rem; }
+  .blog__package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw; }
+    .blog__package-grid-item {
+      cursor: pointer;
+      border-radius: 1.5rem;
+      width: 100%;
+      transition: all .5s; }
+    .blog__package-grid-item:hover {
+      width: 100%;
+      transform: scale(1.1); }
+  .blog-img {
+    width: 100%; }
+
+.item-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.13);
+  padding: 1.5rem; }
+  .item-bottom-heading {
+    text-align: start;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--gray-dark);
+    margin-bottom: 1rem; }
+  .item-bottom a {
+    display: flex;
+    align-items: center;
+    color: #999;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    text-decoration: none; }
+    .item-bottom a .learn-more-icon {
+      margin-right: 1rem; }
+
+@media only screen and (max-width: 950px) {
+  .blog__container {
+    width: 60vw; }
+  .blog__package-grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4rem; }
+    .blog__package-grid-item {
+      grid-column: 1/ -1; } }
 
 .services {
   grid-column: 2 / -2;
