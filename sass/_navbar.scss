@@ -28,6 +28,7 @@ h1 {
     align-items: center;
     margin-left: auto;
     &-item {
+      cursor: pointer;
       font-weight: 700;
       font-size: 1.6rem;
       letter-spacing: 2px;
@@ -35,6 +36,13 @@ h1 {
       float: left;
       margin-left: 1rem;
       margin-right: 1rem;
+      padding-bottom: 3px;
+      transition: all .4s;
+      border-bottom: 2px solid transparent;
+    }
+    &-item:hover {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
     }
   }
 }
@@ -84,7 +92,7 @@ h1 {
   
   &-image {
     margin-top: 2rem;
-    width: 100%;
+    // width: 100%;
     height: 100%;
     background: center url(../img/hero-img.jpg) no-repeat;
     background-size: cover;
@@ -105,4 +113,22 @@ h1 {
   .nav__list {
     display: none;
   }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-description {
+    padding: 5rem 2rem 2rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+  .hero-description__heading::after {
+    left: 38%;
+  }
+
+  .hero-image {
+    min-height: 10vw;
+    margin-left: 1rem;
+  }
+  
 }

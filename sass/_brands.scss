@@ -1,4 +1,56 @@
 .brands {
+  margin-top: 2rem;
   grid-column: 2 / -2;
-  background-color: rgb(65, 225, 220);
+  background-color: var(--white);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__heading {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #343a40;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+  }
+
+  &__heading::after {
+      content: '';
+      background: var(--primary-color);
+      width: 8rem;
+      height: 2px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 1.5rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0 8rem 0;
+    list-style-type: none;
+
+  }
+}
+
+ion-icon {
+  font-size: 8rem;
+  color: var(--primary-color);
+}
+
+ion-icon[name='flame'] {
+  color: #c98900;
+}
+
+@media only screen and (max-width: 500px) {
+  .brands__heading {
+    margin-bottom: 1rem;
+  }
 }
