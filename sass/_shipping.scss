@@ -1,11 +1,23 @@
 .shipping {
   grid-column: 1 / -1;
   background-color: var(--white);
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .shipping {
+    margin-bottom: 0;
+    
+  }
+
+  .shipping .hero .hero-description {
+    background: var(--gray-light);
+    padding: 10rem 2rem 10rem 2rem
   }
 }

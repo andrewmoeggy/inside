@@ -15,14 +15,29 @@
   <header class="header">
     <nav class="nav">
       <h1 class="logo-heading">Inside</h1>
-      <ul class="nav__list">
-        <li class="nav__list-item">Home</li>
-        <li class="nav__list-item">About Us</li>
-        <li class="nav__list-item">Pages</li>
-        <li class="nav__list-item">Gallery</li>
-        <li class="nav__list-item">Contact Us</li>
-        <li class="nav__list-item search-icon">search</li>
-      </ul>
+
+
+      <div class="menu">
+        <!-- Hamburger Menu with no JS / Checkbox trick -->
+        <label for="toggle" class="toggle" class="hamburger__menu">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="#">Home</a></li>
+          <li class="nav__list-item"><a href="#">About Us</a></li>
+          <li class="nav__list-item"><a href="#">Pages</a></li>
+          <li class="nav__list-item"><a href="#">Gallery</a></li>
+          <li class="nav__list-item"><a href="#">Contact Us</a></li>
+          <li class="nav__list-item search-icon"><a href="#">search</a></li>
+
+        </ul>
+      </div>
+
+      <span>
+
+      </span>
+      </div>
+
+
     </nav>
     <div class="hero">
       <div class="hero-description">
@@ -224,6 +239,8 @@
     <p class="copy_paragraph"> 2020 &copy; Andrew Moeggenberg. For Demonstration purposes only.</p>
   </footer>
   <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 
 </html>
