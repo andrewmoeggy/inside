@@ -1,4 +1,138 @@
 .services {
-  grid-column: 2 / -2;
-  background-color: var(--gray-light);
+  grid-column: 1 / -1;
+  background-color: var(--white);
+
+
+  &__container {
+    width: 65vw;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    position: relative;
+    color: var(--gray-dark);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  &__heading::after {
+    content: '';
+    background: var(--primary-color);
+    width: 8rem;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 1.5rem;
+  }
+
+  &__paragraph {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: var(--gray-dark-alpha);
+    margin-bottom: 10rem;
+    width: 60%;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      border-radius: 1.5rem;
+      transition: all .3s ease-in-out;
+
+      &-active {
+        box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+      }
+      
+    }
+
+    &-item:hover {
+      box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 7rem 2rem;
+      text-align: center;
+      cursor: pointer;
+      &-icon {
+        border: 1px solid var(--primary-color);
+        border-radius: 4rem;
+        padding: 1rem;
+        font-size: 6rem;
+      }
+
+      &-heading {
+        color: var(--gray-dark);
+        font-size: 2.5rem;
+        padding: 1.3rem 0 1.3rem 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      &-paragraph {
+        font-size: 1.6rem;
+        width: 70%;
+        color: var(--gray);
+        letter-spacing: 2px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .services {
+
+    &__container {
+      width: 90vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .services {
+    &__heading {
+      margin-top: 5rem;
+    }
+
+    &__paragraph {
+      margin-bottom: 0rem;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+    &__container {
+      width: 70vw;
+    }
+
+    &__row {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+
+      &-card {
+        padding: 5rem 1rem;
+      }
+    }
+  }
 }

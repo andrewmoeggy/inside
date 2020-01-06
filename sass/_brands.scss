@@ -51,12 +51,19 @@ ion-icon[name='flame'] {
 
 @media only screen and (max-width: 500px) {
 
-  .brand {
+  .brands {
     &__heading {
       margin-bottom: 1rem;
     }
     &__list {
       padding: 7rem 1rem 7rem 1rem;
+
+      & li {
+
+        & ion-icon {
+          font-size: 6rem;
+        }
+      }
     }
   }
   
