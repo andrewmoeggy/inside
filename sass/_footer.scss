@@ -1,4 +1,77 @@
 .footer {
   grid-column: 1 / -1;
-  background-color: steelblue;
+  background-color: var(--gray-light);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    color: var(--primary-color);
+    font-size: 4rem;
+    padding: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    &-item {
+      cursor: pointer;
+      font-size: 1.7rem;
+      padding: 3rem;
+      color: #787878;
+      transition: all .2s;
+    }
+    &-item:hover {
+      color: var(--text-color);
+    }
+  }
+  &__sm-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    &-item {
+      padding: 3rem;
+    }
+  }
+}
+
+.copy_paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #787878;
+}
+
+ion-icon.footer-icon {
+  padding: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: all .4s ease-out;
+  box-shadow: 0px 0px 5px .5px transparent;
+}
+ion-icon.footer-icon:hover {
+  box-shadow: 0px 0px 4px .5px var(--primary-color);
+}
+
+.facebook {
+  color: #4267B2;
+}
+
+.instagram {
+  color: #F56040;
+}
+
+.twitter {
+  color: #1DA1F2;
 }
