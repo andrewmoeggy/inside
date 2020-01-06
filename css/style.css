@@ -136,6 +136,12 @@ h1 {
       font-weight: 600;
       font-size: 5rem;
       padding-bottom: 2rem; }
+    .hero-description__heading-2 {
+      position: relative;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 3.67rem;
+      padding-bottom: 2rem; }
     .hero-description__heading::after {
       content: '';
       background: var(--primary-color);
@@ -155,6 +161,13 @@ h1 {
     background-size: cover;
     min-height: 25vw;
     border-radius: 150px 0 0 150px; }
+  .hero-image-2 {
+    margin-top: 2rem;
+    height: 100%;
+    background: center url(../img/hero-img-2.jpg) no-repeat;
+    background-size: cover;
+    min-height: 25vw;
+    border-radius: 150px 0 0 150px; }
 
 @media only screen and (max-width: 900px) {
   .hero {
@@ -166,16 +179,17 @@ h1 {
     display: none; } }
 
 @media only screen and (max-width: 500px) {
+  .hero {
+    grid-template-rows: 1fr; }
   .hero-description {
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 0rem 2rem;
     margin: 0 auto;
     text-align: center;
     align-items: center; }
   .hero-description__heading::after {
     left: 38%; }
-  .hero-image {
-    min-height: 10vw;
-    margin-left: 1rem; } }
+  .hero-image, .hero-image-2 {
+    display: none; } }
 
 .brands {
   margin-top: 2rem;
@@ -217,12 +231,14 @@ ion-icon[name='flame'] {
   color: #c98900; }
 
 @media only screen and (max-width: 500px) {
-  .brands__heading {
-    margin-bottom: 1rem; }
-  .brands__list {
-    padding: 7rem 1rem 7rem 1rem; }
-    .brands__list li ion-icon {
-      font-size: 6rem; } }
+  .brands {
+    margin-top: 0; }
+    .brands__heading {
+      margin-bottom: 0rem; }
+    .brands__list {
+      padding: 7rem 1rem 7rem 1rem; }
+      .brands__list li ion-icon {
+        font-size: 6rem; } }
 
 .blog {
   grid-column: 1 / -1;
@@ -311,6 +327,7 @@ ion-icon[name='flame'] {
   .blog__heading {
     padding-top: 0; }
   .blog__paragraph {
+    width: 100%;
     margin-bottom: 5rem;
     padding: 0; }
   .blog__container {
@@ -322,7 +339,8 @@ ion-icon[name='flame'] {
 
 .services {
   grid-column: 1 / -1;
-  background-color: var(--white); }
+  background-color: var(--white);
+  margin-bottom: 5rem; }
   .services__container {
     width: 65vw;
     margin: 0 auto;
@@ -419,7 +437,10 @@ ion-icon[name='flame'] {
 
 .shipping {
   grid-column: 1 / -1;
-  background-color: seagreen; }
+  background-color: var(--white); }
+  .shipping__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
 
 .testimonials {
   grid-column: 1/ -1;

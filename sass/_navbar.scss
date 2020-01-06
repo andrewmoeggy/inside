@@ -74,6 +74,13 @@ h1 {
       font-size: 5rem;
       padding-bottom: 2rem;
     }
+    &__heading-2 {
+      position: relative;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 3.67rem;
+      padding-bottom: 2rem;
+    }
     &__heading::after {
       content: '';
       background: var(--primary-color);
@@ -99,6 +106,15 @@ h1 {
     min-height: 25vw;
     border-radius: 150px 0 0 150px;
   }
+  &-image-2 {
+    margin-top: 2rem;
+    // width: 100%;
+    height: 100%;
+    background: center url(../img/hero-img-2.jpg) no-repeat;
+    background-size: cover;
+    min-height: 25vw;
+    border-radius: 150px 0 0 150px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -116,8 +132,11 @@ h1 {
 }
 
 @media only screen and (max-width: 500px) {
+  .hero {
+    grid-template-rows: 1fr;
+  }
   .hero-description {
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 0rem 2rem;
     margin: 0 auto;
     text-align: center;
     align-items: center;
@@ -126,9 +145,8 @@ h1 {
     left: 38%;
   }
 
-  .hero-image {
-    min-height: 10vw;
-    margin-left: 1rem;
+  .hero-image, .hero-image-2 {
+    display: none;
   }
   
 }
