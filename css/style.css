@@ -297,14 +297,12 @@ ion-icon[name='flame'] {
     .item-bottom a .learn-more-icon {
       margin-right: 1rem; }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1200px) {
   .blog__container {
-    width: 70vw; }
+    width: 90vw; }
   .blog__package-grid {
-    grid-template-columns: repeat(8, 1fr);
-    gap: 4rem; }
-    .blog__package-grid-item {
-      grid-column: 1/ -1; } }
+    padding: 2rem;
+    gap: 4rem; } }
 
 @media only screen and (max-width: 800px) {
   .blog__heading {
@@ -313,9 +311,8 @@ ion-icon[name='flame'] {
     margin-bottom: 5rem;
     padding: 0; }
   .blog__container {
-    width: 60vw; }
+    width: 70vw; }
   .blog__package-grid {
-    grid-template-columns: repeat(8, 1fr);
     gap: 4rem; }
     .blog__package-grid-item {
       grid-column: 1/ -1; } }
