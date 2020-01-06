@@ -14,8 +14,8 @@
 
   &__heading {
     color: var(--primary-color);
-    font-size: 4rem;
-    padding: 1rem;
+    font-size: 4.5rem;
+    padding: 2rem;
   }
 
   &__list {
@@ -47,6 +47,7 @@
 }
 
 .copy_paragraph {
+  text-align: center;
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #787878;
@@ -60,9 +61,10 @@ ion-icon.footer-icon {
   border-radius: 50%;
   transition: all .4s ease-out;
   box-shadow: 0px 0px 5px .5px transparent;
+  margin-right: 1rem;
 }
 ion-icon.footer-icon:hover {
-  box-shadow: 0px 0px 4px .5px var(--primary-color);
+  box-shadow: 0px 0px 6px .5px var(--primary-color);
 }
 
 .facebook {
@@ -100,4 +102,15 @@ ion-icon.footer-icon:hover {
       }
     }
   }
+}
+
+@media only screen and (max-width: 400px) {
+  .footer__list {
+    margin: 0 0rem;
+
+    &-item {
+      padding: .5rem;
+    }
+  }
+  
 }

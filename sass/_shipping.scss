@@ -8,8 +8,13 @@
     grid-template-columns: repeat(2, 1fr);
 
   }
+  
 }
-
+@media only screen and (max-width: 900px) {
+  .hero-image-2{
+    margin-left: 3rem;
+  }
+}
 @media only screen and (max-width: 500px) {
   .shipping {
     margin-bottom: 0;

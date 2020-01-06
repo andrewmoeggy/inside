@@ -169,6 +169,9 @@ h1 {
     min-height: 25vw;
     border-radius: 150px 0 0 150px; }
 
+.search-icon {
+  font-size: 3rem; }
+
 .menu {
   position: relative;
   display: flex;
@@ -188,9 +191,13 @@ h1 {
 #toggle {
   display: none; }
 
+@media only screen and (max-width: 1200px) {
+  .search-icon {
+    margin-left: 2rem; } }
+
 @media only screen and (max-width: 1000px) {
   .search-icon {
-    margin-right: .5rem; } }
+    margin-right: 3.5rem; } }
 
 @media only screen and (max-width: 900px) {
   .hero {
@@ -205,12 +212,12 @@ h1 {
     cursor: pointer;
     font-size: 4rem;
     color: var(--primary-color);
-    margin-right: 3rem; }
+    margin-right: 5rem; }
   .nav__list {
     position: absolute;
     display: none;
     width: 100vw;
-    top: 91px;
+    top: 81px;
     left: .5px;
     right: .5px; }
   .nav__list-item {
@@ -228,11 +235,14 @@ h1 {
     margin-bottom: 4rem;
     z-index: 1000; }
   .search-icon {
-    margin-left: 0; } }
+    margin-left: 0;
+    margin-right: 0; } }
 
 @media only screen and (max-width: 500px) {
   .hero {
     grid-template-rows: 1fr; }
+  .nav__list {
+    top: 66px; }
   .hero-description {
     padding: 5rem 2rem 0rem 2rem;
     margin: 0 auto;
@@ -509,6 +519,10 @@ ion-icon[name='flask'] {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
 
+@media only screen and (max-width: 900px) {
+  .hero-image-2 {
+    margin-left: 3rem; } }
+
 @media only screen and (max-width: 500px) {
   .shipping {
     margin-bottom: 0; }
@@ -592,8 +606,8 @@ ion-icon[name='flask'] {
     margin-bottom: 2rem; }
   .footer__heading {
     color: var(--primary-color);
-    font-size: 4rem;
-    padding: 1rem; }
+    font-size: 4.5rem;
+    padding: 2rem; }
   .footer__list {
     display: flex;
     justify-content: space-around;
@@ -617,6 +631,7 @@ ion-icon[name='flask'] {
       padding: 3rem 0rem; }
 
 .copy_paragraph {
+  text-align: center;
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #787878; }
@@ -628,10 +643,11 @@ ion-icon.footer-icon {
   border: 1px solid transparent;
   border-radius: 50%;
   transition: all .4s ease-out;
-  box-shadow: 0px 0px 5px .5px transparent; }
+  box-shadow: 0px 0px 5px .5px transparent;
+  margin-right: 1rem; }
 
 ion-icon.footer-icon:hover {
-  box-shadow: 0px 0px 4px 0.5px var(--primary-color); }
+  box-shadow: 0px 0px 6px 0.5px var(--primary-color); }
 
 .facebook {
   color: #4267B2; }
@@ -652,3 +668,9 @@ ion-icon.footer-icon:hover {
       padding: 2rem; }
   .footer__sm-list-item {
     padding: 1rem; } }
+
+@media only screen and (max-width: 400px) {
+  .footer__list {
+    margin: 0 0rem; }
+    .footer__list-item {
+      padding: .5rem; } }

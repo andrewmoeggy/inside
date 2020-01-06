@@ -117,6 +117,10 @@ h1 {
   }
 }
 
+.search-icon {
+  font-size: 3rem;
+}
+
 ////////////////////////////////////
 // Collapsable Hamburger Menu
 ////////////////////////////////////
@@ -147,9 +151,15 @@ h1 {
 
 
 // MEDIA QUERIES
+
+@media only screen and (max-width: 1200px) {
+  .search-icon {
+    margin-left: 2rem;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .search-icon {
-    margin-right: .5rem;
+    margin-right: 3.5rem;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -169,14 +179,14 @@ h1 {
     cursor: pointer;
     font-size: 4rem;
     color: var(--primary-color);
-    margin-right: 3rem;
+    margin-right: 5rem;
   }
   
   .nav__list {
     position: absolute;
     display: none;
     width: 100vw;
-    top: 91px;
+    top: 81px;
     left:.5px;
     right: .5px;
   }
@@ -192,6 +202,9 @@ h1 {
     z-index: 1000;
     background-color: rgb(255, 255, 255);
   }
+
+  .nav__list-item:nth-child(1) {
+  }
   
   #toggle:checked + .nav__list {
     display: flex;
@@ -202,6 +215,7 @@ h1 {
 
   .search-icon {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -210,6 +224,9 @@ h1 {
 @media only screen and (max-width: 500px) {
   .hero {
     grid-template-rows: 1fr;
+  }
+  .nav__list {
+    top: 66px;
   }
   .hero-description {
     padding: 5rem 2rem 0rem 2rem;
