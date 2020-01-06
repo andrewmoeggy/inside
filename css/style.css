@@ -4,6 +4,7 @@
   --text-color-gray: #4c4c4c;
   --white: #fff;
   --gray: #6c757d;
+  --gray-2: #e8e8e8;
   --gray-dark: #343a40;
   --gray-dark-alpha: #343a4080;
   --gray-light: #f8f9fa;
@@ -174,7 +175,9 @@ h1 {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr; }
     .hero-image {
-      margin-left: 4rem; }
+      margin-top: 0;
+      margin-left: 4rem;
+      margin-bottom: 4rem; }
   .nav__list {
     display: none; } }
 
@@ -185,7 +188,11 @@ h1 {
     padding: 5rem 2rem 0rem 2rem;
     margin: 0 auto;
     text-align: center;
-    align-items: center; }
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/img/hero-img.jpg"); }
+    .hero-description__paragraph {
+      color: black;
+      text-shadow: rgba(8, 8, 8, 0.08); }
   .hero-description__heading::after {
     left: 38%; }
   .hero-image, .hero-image-2 {
@@ -194,8 +201,7 @@ h1 {
 .brands {
   margin-top: 2rem;
   grid-column: 2 / -2;
-  background-color: var(--white);
-  margin-bottom: 2rem; }
+  background-color: var(--white); }
   .brands__container {
     display: flex;
     flex-direction: column;
@@ -230,6 +236,16 @@ ion-icon {
 
 ion-icon[name='flame'] {
   color: #c98900; }
+
+ion-icon[name='compass'] {
+  color: var(--gray-2); }
+
+ion-icon[name='flask'] {
+  color: var(--gray-2); }
+
+@media only screen and (max-width: 900px) {
+  .brands {
+    margin-top: 8rem; } }
 
 @media only screen and (max-width: 500px) {
   .brands {
@@ -526,12 +542,13 @@ ion-icon[name='flame'] {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    list-style: none; }
+    list-style: none;
+    margin: 0 4rem; }
     .footer__list-item {
       cursor: pointer;
       font-size: 1.7rem;
-      padding: 3rem;
-      color: #787878;
+      padding: 3rem 1rem;
+      color: #5a5a5a;
       transition: all .2s; }
     .footer__list-item:hover {
       color: var(--text-color); }
@@ -541,7 +558,7 @@ ion-icon[name='flame'] {
     align-items: center;
     list-style: none; }
     .footer__sm-list-item {
-      padding: 3rem; }
+      padding: 3rem 0rem; }
 
 .copy_paragraph {
   font-size: 1.2rem;
@@ -549,7 +566,7 @@ ion-icon[name='flame'] {
   color: #787878; }
 
 ion-icon.footer-icon {
-  padding: 1rem;
+  padding: .6rem;
   font-size: 3rem;
   cursor: pointer;
   border: 1px solid transparent;
@@ -568,3 +585,14 @@ ion-icon.footer-icon:hover {
 
 .twitter {
   color: #1DA1F2; }
+
+@media only screen and (max-width: 900px) {
+  .footer__container {
+    flex-direction: column; }
+  .footer__list {
+    align-items: center;
+    justify-content: center; }
+    .footer__list-item {
+      padding: 2rem; }
+  .footer__sm-list-item {
+    padding: 1rem; } }
