@@ -22,6 +22,10 @@ h1 {
   align-items: center;
   flex-basis: auto;
   box-shadow: 1px 3px 8px 3px rgba(8, 8, 8, 0.08);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--white);
 
   &__list {
     list-style: none;
@@ -189,6 +193,7 @@ h1 {
     top: 81px;
     left:.5px;
     right: .5px;
+    transition: all .2s ease-in-out;
   }
 
   
@@ -203,9 +208,6 @@ h1 {
     background-color: rgb(255, 255, 255);
   }
 
-  .nav__list-item:nth-child(1) {
-  }
-  
   #toggle:checked + .nav__list {
     display: flex;
     flex-direction: column;
