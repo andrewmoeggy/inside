@@ -61,6 +61,8 @@ h1 {
 
 .hero {
   display: grid;
+  margin-top: 9.1rem;
+
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;

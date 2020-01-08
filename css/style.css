@@ -124,6 +124,7 @@ h1 {
 
 .hero {
   display: grid;
+  margin-top: 9.1rem;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
@@ -263,7 +264,7 @@ h1 {
     display: none; } }
 
 .brands {
-  margin-top: 2rem;
+  margin-top: 9.1rem;
   grid-column: 2 / -2;
   background-color: var(--white); }
   .brands__container {
