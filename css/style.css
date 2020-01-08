@@ -222,7 +222,7 @@ h1 {
     position: absolute;
     display: none;
     width: 100vw;
-    top: 81px;
+    top: 69px;
     left: .5px;
     right: .5px;
     transition: all .2s ease-in-out; }
@@ -235,6 +235,8 @@ h1 {
     padding: 2rem;
     z-index: 1000;
     background-color: white; }
+    .nav__list-item:nth-child(1) {
+      border-top: 1px solid; }
   #toggle:checked + .nav__list {
     display: flex;
     flex-direction: column;
@@ -244,11 +246,13 @@ h1 {
     margin-left: 0;
     margin-right: 0; } }
 
+@media only screen and (max-width: 576px) {
+  .nav__list {
+    top: 55px; } }
+
 @media only screen and (max-width: 500px) {
   .hero {
     grid-template-rows: 1fr; }
-  .nav__list {
-    top: 66px; }
   .hero-description {
     padding: 5rem 2rem 0rem 2rem;
     margin: 0 auto;
