@@ -25,7 +25,6 @@ h1 {
   align-items: center;
   flex-basis: auto;
   box-shadow: 1px 3px 8px 3px rgba(8, 8, 8, 0.08);
-  position: fixed;
   width: 100%;
   z-index: 1000;
   background-color: var(--white);
@@ -55,7 +54,7 @@ h1 {
 }
 .search-icon {
   margin-left: 10rem;
-  margin-right: 15rem;
+  margin-right: 5rem;
 }
 .logo-heading {
   padding-left: 2rem;
@@ -64,7 +63,6 @@ h1 {
 
 .hero {
   display: grid;
-  margin-top: 12rem;
 
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -176,7 +174,6 @@ h1 {
   .hero {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
-    margin-top: 9rem;
     
     &-image {
       margin-top: 0;
